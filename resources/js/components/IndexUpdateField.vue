@@ -1,6 +1,6 @@
 <template>
-  <span>
-    <span v-if="field.value">
+  <span v-if="field.value">
+    <span v-if="$parent.resource.authorizedToUpdate">
       <router-link
         :to="{
             name: 'update',
@@ -12,8 +12,9 @@
         class="no-underline dim text-primary font-bold"
       >{{ field.value }}</router-link>
     </span>
-    <span v-else>&mdash;</span>
+    <span v-else>{{ field.value }}</span>
   </span>
+  <span v-else>&mdash;</span>
 </template>
 
 <script>
