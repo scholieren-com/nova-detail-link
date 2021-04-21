@@ -3,7 +3,7 @@
     <span v-if="$parent.resource.authorizedToUpdate">
       <router-link
         :to="{
-            name: 'update',
+            name: 'edit',
             params: {
                 resourceName: resourceName,
                 resourceId: $parent.resource.id.value,
